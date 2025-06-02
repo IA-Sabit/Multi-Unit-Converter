@@ -1,0 +1,16 @@
+-- Create the database
+CREATE DATABASE unit_converter;
+
+-- Select the database
+USE unit_converter;
+
+-- Create the conversions table
+CREATE TABLE conversions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    input_value FLOAT NOT NULL,
+    from_unit VARCHAR(50) NOT NULL,
+    to_unit VARCHAR(50) NOT NULL,
+    result FLOAT NOT NULL,
+    unit_type VARCHAR(20) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
